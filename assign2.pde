@@ -175,8 +175,8 @@ void draw(){
         }
         
         //arrive the pond
-        if (frogX > 0 &&
-            frogX < 608 &&
+        if (frogX >= 0 &&
+            frogX <= 608 &&
             frogY <= 64 ){
               gameState = GAME_WIN;
             }
