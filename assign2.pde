@@ -75,8 +75,8 @@ void draw(){
       frogX=frogInitX;
       frogY=frogInitY;
       gameState = GAME_RUN;
-      break;
       }
+      break;
     case GAME_RUN:
         background(10,110,16);
         
