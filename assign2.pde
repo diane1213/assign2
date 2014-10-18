@@ -128,12 +128,11 @@ void draw(){
          float frogCX = frogX+frogW/2;
          float frogCY = frogY+frogH/2;
           
-         // car1 hitTest
-        if ( leftCar1X + leftCar1W >= frogX && 
+          // car1 hitTest
+        if ( leftCar1X + leftCar1W >= frogCX && 
              leftCar1X <= frogCX ) {
         if ( frogCY < leftCar1Y +leftCar1H &&
              frogCY > leftCar1Y) {
-             image(imgDeadFrog, frogX, frogY);
         image(imgDeadFrog, frogX, frogY);
         life--;
         gameState = FROG_DIE;
@@ -142,11 +141,10 @@ void draw(){
    
   
          // car2 hitTest
-        if ( rightCar1X <= frogX + frogW && 
-             rightCar1X >= frogCX ) {
-        if ( frogCY < rightCar1Y +rightCar1H &&
-             frogCY >= rightCar1Y) {
-             image(imgDeadFrog, frogX, frogY);
+        if ( rightCar1X +rightCar1W >= frogCX && 
+      rightCar1X <= frogCX ) {
+      if ( frogCY < rightCar1Y +rightCar1H &&
+        frogCY > rightCar1Y) {
         image(imgDeadFrog, frogX, frogY);
         life--;
         gameState = FROG_DIE;
@@ -154,11 +152,10 @@ void draw(){
       }
          
          // car3 hitTest
-        if ( leftCar2X + leftCar2W >= frogX && 
+        if ( leftCar2X + leftCar2W >= frogCX && 
              leftCar2X <= frogCX ) {
         if ( frogCY < leftCar2Y +leftCar2H &&
              frogCY > leftCar2Y) {
-             image(imgDeadFrog, frogX, frogY);
         image(imgDeadFrog, frogX, frogY);
         life--;
         gameState = FROG_DIE;
@@ -166,15 +163,15 @@ void draw(){
       }
       
          // car4 hitTest
-        if ( rightCar2X <= frogX + frogW && 
-             rightCar2X >= frogCX ) {
-        if ( frogCY <= rightCar2Y +rightCar2H &&
-             frogCY > rightCar2Y) {
-             image(imgDeadFrog, frogX, frogY);
+            if ( rightCar2X + rightCar2W>= frogCX && 
+      rightCar2X <= frogCX ) {
+      if ( frogCY < rightCar2Y +rightCar2H &&
+        frogCY > rightCar2Y) {
         image(imgDeadFrog, frogX, frogY);
         life--;
         gameState = FROG_DIE;
         }
+        
         
         //die three times
         if (life < 1){
