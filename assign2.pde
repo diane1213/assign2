@@ -181,9 +181,7 @@ void draw() {
         gameState = FROG_DIE;
       }
       //arrive the pond
-      if (frogX >= 0 &&
-        frogX <= 608 &&
-        frogY <= 64 ) {
+      if (frogY = pondY ) {
         gameState = GAME_WIN;
       }
     } 
@@ -239,7 +237,7 @@ void keyPressed() {
     }
   }
 
-  if (key==ENTER /*still needs something*/) {
+  if (key==ENTER && gameState == GAME_LOSE || gameState == GAME_WIN || game == GAME_START ) {
     gameState = GAME_RUN;
     life=3;
     frogX = frogInitX;
