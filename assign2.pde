@@ -132,10 +132,7 @@ void draw() {
     }
     image(imgRightCar2, rightCar2X, rightCar2Y);
     
-    //arrive the pond
-      if (frogY <= 64 ) {
-        gameState = GAME_WIN;
-      }
+    
 
     float frogCX = frogX+frogW/2;
     float frogCY = frogY+frogH/2;
@@ -186,6 +183,11 @@ void draw() {
         image(imgDeadFrog, frogX, frogY);
         life--;
         gameState = FROG_DIE;
+      }
+      
+      //arrive the pond
+      if (frogY < 64 ) {
+        gameState = GAME_WIN;
       }
       
     } 
