@@ -102,10 +102,7 @@ void draw() {
     // to meet the requirement
     // -------------------------------
     
-    //arrive the pond
-      if (frogY <= 64 ) {
-        gameState = GAME_WIN;
-      }
+    
 
     //car1 move
     leftCar1X += 3/2* speed;
@@ -134,6 +131,11 @@ void draw() {
       rightCar2X = width;
     }
     image(imgRightCar2, rightCar2X, rightCar2Y);
+    
+    //arrive the pond
+      if (frogY <= 64 ) {
+        gameState = GAME_WIN;
+      }
 
     float frogCX = frogX+frogW/2;
     float frogCY = frogY+frogH/2;
