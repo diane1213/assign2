@@ -212,28 +212,28 @@ void keyPressed() {
     switch ( keyCode )
     {
     case UP:
-      frogY = frogY - 3* speed;
+      frogY = frogY - 32;
       if (frogY <0) {
         frogY = 0;
       }
       break;
 
     case DOWN:
-      frogY = frogY + 2* speed;
+      frogY = frogY + 32;
       if (frogY + frogH >= height) {
         frogY = height - frogH;
       }
       break;
 
     case LEFT:
-      frogX = frogX - 2.5 *speed;
+      frogX = frogX - 32;
       if (frogX <0) {
         frogX = 0;
       }
       break;
 
     case RIGHT:
-      frogX = frogX + 1.5 *speed;
+      frogX = frogX + 32;
       if (frogX + frogW >= width) {
         frogX = width - frogW;
       }
