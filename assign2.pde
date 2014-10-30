@@ -101,6 +101,11 @@ void draw() {
     // Modify the following code
     // to meet the requirement
     // -------------------------------
+    
+    //arrive the pond
+      if (frogY <= 64 ) {
+        gameState = GAME_WIN;
+      }
 
     //car1 move
     leftCar1X += 3/2* speed;
@@ -180,10 +185,7 @@ void draw() {
         life--;
         gameState = FROG_DIE;
       }
-      //arrive the pond
-      if (frogY <= 64 ) {
-        gameState = GAME_WIN;
-      }
+      
     } 
     break;
 
