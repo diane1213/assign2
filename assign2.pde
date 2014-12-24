@@ -200,7 +200,7 @@ void draw(){
 }
 
 void keyPressed() {
-    if (key == CODED /*still needs something*/) {
+    if (key == CODED && gameSate == GAME_RUN/*still needs something*/) {
      switch ( keyCode )
       {
       case UP:
