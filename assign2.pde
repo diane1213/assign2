@@ -8,7 +8,7 @@ float pondY;
 
 float speed;
 
-int life=3;
+int life;
 int currentTime = 0;
 
 final int GAME_START = 1;
@@ -67,7 +67,8 @@ void draw(){
   switch (gameState){
     case GAME_START:
         background(10,110,16);
-        text("Press Enter", width/3, height/2);    
+        textAlign(CENTER);
+        text("Press Enter", width/2, height/2);    
         break;
         
     case FROG_DIE:
@@ -76,7 +77,6 @@ frogX=frogInitX;
 frogY=frogInitY;
 gameState = GAME_RUN;
 }
-
 break;
         
     case GAME_RUN:
