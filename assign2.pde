@@ -125,7 +125,11 @@ void draw(){
          float frogCX = frogX+frogW/2;
          float frogCY = frogY+frogH/2;
          
-        
+        //arrive the pond
+        if (frogY < 64 ){
+              gameState = GAME_WIN;
+            }
+      }
           
          // car1 hitTest
         if ( leftCar1X + leftCar1W >= frogCX && 
@@ -170,13 +174,6 @@ void draw(){
         life--;
         gameState = FROG_DIE;
         }
-        
-        
-         //arrive the pond
-        if (frogY <= 64 ){
-              gameState = GAME_WIN;
-            }
-      }
       
          //die three times
         if (life < 1){
