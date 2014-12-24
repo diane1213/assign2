@@ -8,7 +8,7 @@ float pondY;
 
 float speed;
 
-int life;
+int life=3;
 int currentTime = 0;
 
 final int GAME_START = 1;
