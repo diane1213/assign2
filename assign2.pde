@@ -171,16 +171,19 @@ void draw(){
         gameState = FROG_DIE;
         }
         
+        
+         //arrive the pond
+        if (frogY <= pondY ){
+              gameState = GAME_WIN;
+            }
+      }
+      
          //die three times
         if (life < 1){
         gameState = GAME_LOSE;
         }
         
-        //arrive the pond
-        if (frogY <= pondY ){
-              gameState = GAME_WIN;
-            }
-      }
+       
         
         break;
         
@@ -201,7 +204,7 @@ void draw(){
 }
 
 void keyPressed() {
-    if (key == CODED && gameSate == GAME_RUN/*still needs something*/) {
+    if (key == CODED && gameState == GAME_RUN) {
      switch ( keyCode )
       {
       case UP:
