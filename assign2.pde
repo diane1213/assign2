@@ -68,12 +68,14 @@ void draw(){
         background(10,110,16);
         text("Press Enter", width/3, height/2);    
         break;
+        
     case FROG_DIE:
         delay(1000);
         frogX=frogInitX;
         frogY=frogInitY;
         gameState = GAME_RUN;
         break;
+        
     case GAME_RUN:
         background(10,110,16);
         
@@ -174,7 +176,6 @@ void draw(){
         if (frogY <= 64 ){
               gameState = GAME_WIN;
             }
-      }
       
          //die three times
         if (life < 1){
@@ -185,6 +186,7 @@ void draw(){
         break;
         
     case GAME_WIN:
+    
         background(0);
         image(imgWinFrog,207,164);
         fill(255);
