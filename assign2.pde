@@ -93,6 +93,19 @@ void draw(){
         // Modify the following code
         // to meet the requirement
         // -------------------------------
+       
+        //die three times
+        if (life < 1){
+        gameState = GAME_LOSE;
+        }
+        
+        //arrive the pond
+        if (frogX > 0 &&
+            frogX < 608 &&
+            frogY <= 64 ){
+              gameState = GAME_WIN;
+            }
+      }
         
          //car1 move
          leftCar1X += 3/2* speed;
@@ -169,18 +182,6 @@ void draw(){
         gameState = FROG_DIE;
         }
         
-        //die three times
-        if (life < 1){
-        gameState = GAME_LOSE;
-        }
-        
-        //arrive the pond
-        if (frogX > 0 &&
-            frogX < 608 &&
-            frogY <= 64 ){
-              gameState = GAME_WIN;
-            }
-      } 
         break;
         
     case GAME_WIN:
