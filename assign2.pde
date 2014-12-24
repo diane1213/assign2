@@ -168,6 +168,7 @@ void draw(){
         life--;
         gameState = FROG_DIE;
         }
+        }
         
       //arrive the pond
         if (frogY <= 64 ){
